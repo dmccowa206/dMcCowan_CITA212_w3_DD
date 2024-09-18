@@ -33,6 +33,11 @@ public class Delivery : MonoBehaviour
             Debug.Log("Package delivered.");
             havePack = false;
             sprRender.color = noPackColor;
+            CountTracker.packNum ++;
+            if (CountTracker.packNum >= 3)
+            {
+                CountTracker.victory = true;
+            }
         }
     }
 }
